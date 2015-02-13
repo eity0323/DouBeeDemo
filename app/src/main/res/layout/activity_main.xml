@@ -1,0 +1,112 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_head"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/top_bar_height"
+            android:background="@color/head_bg_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/top_bar_padding_left"
+            android:paddingRight="@dimen/top_bar_padding_right" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/logo" />
+
+            <ImageButton
+                android:id="@+id/ibtn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_add_ibtn" />
+
+            <ImageButton
+                android:id="@+id/ibtn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/top_bar_padding_right"
+                android:layout_toLeftOf="@id/ibtn_add"
+                android:background="@drawable/selector_search_ibtn" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/bottom_line_color" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_menu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_layout_height"
+            android:background="@android:color/white"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_home"
+                style="@style/MainTabButton"
+                android:checked="true"
+                android:drawableTop="@drawable/selector_menu_home"
+                android:text="@string/menu_home_title" />
+
+            <RadioButton
+                android:id="@+id/radio_category"
+                style="@style/MainTabButton"
+                android:drawableTop="@drawable/selector_menu_buy"
+                android:text="@string/menu_category_buy" />
+
+            <RadioButton
+                android:id="@+id/radio_collection"
+                style="@style/MainTabButton"
+                android:drawableTop="@drawable/selector_menu_community"
+                android:text="@string/menu_collection_title" />
+
+            <RadioButton
+                android:id="@+id/radio_cart"
+                style="@style/MainTabButton"
+                android:drawableTop="@drawable/selector_menu_cart"
+                android:text="@string/menu_cart_title" />
+
+            <Button
+                android:id="@+id/btn_cart"
+                style="@style/MainTabButton"
+                android:drawableTop="@drawable/selector_menu_cart"
+                android:text="@string/menu_cart_title"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/radio_member"
+                style="@style/MainTabButton"
+                android:drawableTop="@drawable/selector_menu_member"
+                android:text="@string/menu_member_title" />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

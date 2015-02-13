@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    
+    <color name="color_f3f3f3">#f3f3f3</color>
+    <color name="bg_color">#f3f3f3</color>
+    <color name="head_bg_color">#e03131</color>
+    <color name="bottom_line_color">#c5c5c5</color>
+    <color name="bottom_txt_select">#e03131</color>
+    <color name="bottom_txt_normal">#808590</color>
+    <color name="community_tab_line">#b3adb0</color>
+    <color name="community_tab_sel_line">#71dfa2</color>
+    <color name="community_tab_sel_text_color">#71dfa2</color>
+    <color name="community_tab_text_color">#303437</color>
+    <color name="community_list_bottom_line_color">#d4d4d4</color>
+    <color name="community_list_item_line_color">#dbdbdb</color>
+    <color name="community_listview_item_select_bgcolor">#eeeeee</color>
+    <color name="community_msg_listview_main_title_text">#383d40</color>
+    <color name="community_msg_listview_sub_title_text">#808488</color>
+    <color name="community_msg_listview_extra_title_text">#abb1b6</color>
+    <color name="community_app_bgcolor">#f3f3f3</color>
+    <color name="pub_transparent_image_bg">#80000000</color>
+    <color name="category_line">#dadada</color>
+    <color name="category_text">#343841</color>
+    <color name="category_hint">#b3b3bd</color>
+    <color name="notice_dig_red_color">#E03131</color>
+    <color name="flash_title_color">#15b05a</color>
+    <color name="old_price_color">#b2b2b2</color>
+    <color name="goods_name_color">#646464</color>
+    <color name="shopping_title_color">#646770</color>
+    <color name="shopping_subtitle_color">#ffa302</color>
+    <color name="new_price_color">#ff5000</color>
+    <color name="favourable_title_color">#25a9f6</color>
+    <color name="favourable_sub_title_color">#b3b3bd</color>
+    <color name="recommed_title_color">#8573d0</color>
+    <color name="chat_bar_color">#f6f6f6</color>
+    <color name="chat_bar_font_color_top_title">#383d40</color>
+    <color name="line_color">#e5e5e5</color>
+    <color name="login_bg_color_p">#ef3b3b</color>
+    <color name="register_bg_color">#e1e1e1</color>
+    <color name="register_bg_color_p">#d9d9d9</color>
+    <color name="activity_item_bg_focus">#dfdfdf</color>
+    <color name="personal_stroke_color">#d2d2d2</color>
+    <color name="personal_text_color">#999da1</color>
+    <color name="personal_order_color">#8b8b8b</color>
+
+</resources>
