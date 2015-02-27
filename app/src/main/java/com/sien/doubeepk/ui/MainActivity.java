@@ -30,7 +30,6 @@ import com.sien.doubeepk.ui.view.AddMenuDialog;
 import com.sien.doubeepk.utils.StringUtils;
 
 
-
 /**
  * [主页框架]
  * 
@@ -93,16 +92,12 @@ public class MainActivity extends ActivityGroup implements OnCheckedChangeListen
 	public void onCheckedChanged(RadioGroup arg0, int checkedId) {
 		switch (checkedId) {
 		case R.id.radio_home:
-//			radioGroup.setVisibility(View.VISIBLE);
-//			layout_head.setVisibility(View.VISIBLE);
 			tabHost.setCurrentTab(0);
 			lastCheckId = R.id.radio_home;
 			checkId = 0;
 			break;
 
 		case R.id.radio_category:
-//			radioGroup.setVisibility(View.VISIBLE);
-//			layout_head.setVisibility(View.VISIBLE);
 			tabHost.setCurrentTab(1);
 			lastCheckId = R.id.radio_category;
 			checkId = 1;
@@ -110,22 +105,14 @@ public class MainActivity extends ActivityGroup implements OnCheckedChangeListen
 
 		case R.id.radio_collection:
 			 checkId = 2;
-//			 radioGroup.setVisibility(View.VISIBLE);
-//			 layout_head.setVisibility(View.VISIBLE);
              tabHost.setCurrentTab(2);
              lastCheckId = R.id.radio_collection;
 			 break;
 
 		case R.id.radio_cart:
             checkId = 3;
-//			radioGroup.setVisibility(View.GONE);
-//			layout_head.setVisibility(View.GONE);
 			tabHost.setCurrentTab(3);
             lastCheckId = R.id.radio_cart;
-//			Activity currentActivity = getLocalActivityManager().getCurrentActivity();
-//			if(currentActivity != null){
-//				((WebActivity) currentActivity).loadPage(weburl);
-//			}
 			break;
 		}
 	}
@@ -138,22 +125,13 @@ public class MainActivity extends ActivityGroup implements OnCheckedChangeListen
 	public void switchTab(int checkedId) {
 		radioGroup.check(checkedId);
 		lastCheckId = checkedId;
-		
-//		if(!StringUtils.isEmpty(weburl) && weburl.indexOf("goodsdetail") > -1 && weburl.indexOf("search") > -1){
-//			Activity currentActivity = getLocalActivityManager().getCurrentActivity();
-//			if(currentActivity != null && currentActivity instanceof com.suneee.o2mall.activity.WebActivity){
-//				((WebActivity) currentActivity).loadPage(weburl);
-//			}
-//		}
 	}
 
 	@Override
 	protected void onNewIntent(Intent intent) {
-//		if (intent != null) {
-//			int checkId = intent.getIntExtra(CHECK_ID, R.id.radio_home);
-//			weburl = intent.getStringExtra(WebActivity.URL_KEY);
-//			NLog.e("weburl", weburl);
-//			switchTab(checkId);
+		if (intent != null) {
+			int checkId = intent.getIntExtra(CHECK_ID, R.id.radio_home);
+			switchTab(checkId);
 //
 //			//处理活动刷新
 //			String command = intent.getStringExtra(COMMAND_ID);
@@ -163,14 +141,14 @@ public class MainActivity extends ActivityGroup implements OnCheckedChangeListen
 //				intent1.setAction(CampaignFragment.REFRESH_ACTION);
 //				sendBroadcast(intent1);
 //			}
-//		}
+		}
 	}
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//		if(requestCode == RESULT_LGOIN_ACTION && resultCode == 129){
-//			switchTab(R.id.radio_collection);
-//		}
+		if(requestCode == RESULT_LGOIN_ACTION && resultCode == 129){
+			switchTab(R.id.radio_collection);
+		}
 //		Activity currentActivity = getLocalActivityManager().getCurrentActivity();
 //		if (currentActivity instanceof BaseActivity) {
 //			((BaseActivity) currentActivity).onActivityResult(requestCode, resultCode, data);
@@ -229,7 +207,7 @@ public class MainActivity extends ActivityGroup implements OnCheckedChangeListen
 	 * @param index
 	 */
 	public void changeToCommunity(int index) {
-//		switchTab(R.id.radio_collection);
+		switchTab(R.id.radio_collection);
 //		// 发送广播
 //		Intent intent = new Intent();
 //		intent.putExtra("index", index);

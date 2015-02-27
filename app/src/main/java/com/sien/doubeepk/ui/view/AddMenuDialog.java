@@ -28,7 +28,7 @@ public class AddMenuDialog extends Dialog implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		this.setContentView(R.layout.layout_topright_menu_dialog);
+		this.setContentView(R.layout.layout_main_menu_dialog);
 		this.initWindowParams();
 		this.initView();
 	}

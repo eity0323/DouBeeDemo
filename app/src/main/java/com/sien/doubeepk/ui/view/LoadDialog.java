@@ -45,7 +45,7 @@ public class LoadDialog extends Dialog {
 		this.canNotCancel = canNotCancel;
 		this.tipMsg = tipMsg;
 		this.getContext().setTheme(android.R.style.Theme_InputMethod);
-		setContentView(R.layout.layout_dialog_loading);
+		setContentView(R.layout.layout_common_dialog_loading);
 
 		Window window = getWindow();
 		WindowManager.LayoutParams attributesParams = window.getAttributes();

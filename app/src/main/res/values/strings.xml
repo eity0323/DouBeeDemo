@@ -25,10 +25,10 @@
     <string name="service_tel">客服电话</string>
     <string name="service_tel_no"> 4000-266-818</string>
 
-    <string name="menu_home_title">首页</string>
-    <string name="menu_category_buy">买买</string>
-    <string name="menu_collection_title">社区</string>
-    <string name="menu_cart_title">购物车</string>
-    <string name="menu_member_title">我</string>
+    <string name="menu_home_title">item1</string>
+    <string name="menu_category_buy">item2</string>
+    <string name="menu_collection_title">item3</string>
+    <string name="menu_cart_title">item4</string>
+    <string name="menu_member_title">item5</string>
 
 </resources>

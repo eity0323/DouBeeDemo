@@ -70,12 +70,12 @@ public abstract class LoadingLayout extends FrameLayout implements
 
 		switch (scrollDirection) {
 		case HORIZONTAL:
-			LayoutInflater.from(context).inflate(R.layout.pulltorefresh_header,
+			LayoutInflater.from(context).inflate(R.layout.layout_common_pulltorefresh_header,
 					this);
 			break;
 		case VERTICAL:
 		default:
-			LayoutInflater.from(context).inflate(R.layout.pulltorefresh_header,
+			LayoutInflater.from(context).inflate(R.layout.layout_common_pulltorefresh_header,
 					this);
 			break;
 		}

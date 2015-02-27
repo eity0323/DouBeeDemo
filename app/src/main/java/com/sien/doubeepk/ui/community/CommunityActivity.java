@@ -14,8 +14,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.sien.doubeepk.ui.BaseActivity;
 import com.sien.doubeepk.R;
+import com.sien.doubeepk.ui.BaseActivity;
 
 
 /**
@@ -28,8 +28,6 @@ import com.sien.doubeepk.R;
  **/
 public class CommunityActivity extends BaseActivity implements OnClickListener, OnPageChangeListener{
 
-
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

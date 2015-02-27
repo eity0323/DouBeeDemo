@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 
 dependencies {
@@ -24,11 +29,14 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:support-v4:21.0.2'
     compile 'com.android.support:appcompat-v7:21.0.2'
-    // 编译extras目录下的ShimmerAndroid模块
+    // 编译extras目录下的OneCore模块
     compile project(':extras:OneCore')
+    compile 'de.greenrobot:eventbus:2.2.+'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.1'
+    //二维码jar包
     compile files('libs/zxing.jar')
-    compile files('libs/image-loader-1.9.1.jar')
     compile files('libs/bugly_1.1.2_release.jar')
+    compile files('libs/jpush-sdk-release1.7.3.jar')
 }
 
 

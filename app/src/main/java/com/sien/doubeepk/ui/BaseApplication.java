@@ -28,6 +28,8 @@ import com.tencent.bugly.crashreport.CrashReport.UserStrategy;
 
 import java.io.File;
 
+import cn.jpush.android.api.JPushInterface;
+
 
 /**
  * [系统Application类，设置全局变量以及初始化组件]
@@ -83,13 +85,14 @@ public class BaseApplication extends Application implements APPOnCrashListener {
 		// 初始化默认异常处理组件
 		AppCrashHandler crashHandler = AppCrashHandler.getInstance(getApplicationContext());
 		crashHandler.setOnCrashListener(this);
-		
+
 		//集成腾讯bugly
-		String appId = "900001921"; 
+		String appId = "900002127";
+        boolean isDebug = true ;  //true代表App处于调试阶段，false代表App发布阶段
 		UserStrategy strategy = new UserStrategy(getApplicationContext());
 		strategy.setAppVersion(CommonUtils.getVersionName(getApplicationContext()));
 		strategy.setAppReportDelay(5000);
-	    CrashReport.initCrashReport(getApplicationContext(), appId, true, strategy);
+	    CrashReport.initCrashReport(getApplicationContext(), appId, isDebug, strategy);
 			    
 		DisplayImageOptions options = new DisplayImageOptions.Builder()
 				.showImageOnFail(R.drawable.icon_default_bg)
@@ -110,7 +113,8 @@ public class BaseApplication extends Application implements APPOnCrashListener {
 	}
 	
 	private void initXMPP(){
-
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
 	}
 
 	@Override

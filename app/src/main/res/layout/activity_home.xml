@@ -13,7 +13,15 @@
         android:text="暂时没有相关数据\n点击刷新"
         android:textColor="@color/bottom_txt_normal"
         android:textSize="16sp" 
-        android:visibility="visible"/>
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@null"
+        android:divider="@null" >
+    </ListView>
 
 
 </RelativeLayout>
